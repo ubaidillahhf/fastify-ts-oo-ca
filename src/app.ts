@@ -5,10 +5,8 @@ class App {
     public app: FastifyInstance
     public app_port: number = parseInt(`${config.port}`, 10)
 
-
-
     constructor(appInit: { plugins: any; routes: any }) {
-        this.app = fastify({ logger: true })
+        this.app = fastify()
         this.routes(appInit.routes)
     }
 

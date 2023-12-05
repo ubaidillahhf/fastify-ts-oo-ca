@@ -9,4 +9,8 @@ interface IUserEntity {
     image_profile: string
 }
 
-export { IUserEntity }
+interface ICreateResponse {
+    id: number
+}
+
+export { IUserEntity, ICreateResponse }

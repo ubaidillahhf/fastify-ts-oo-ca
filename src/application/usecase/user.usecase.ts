@@ -1,12 +1,21 @@
-// import CustomError from "../../presentation/overide/error";
+import CustomError from "../../presentation/overide/error";
+import { ICreateResponse, IUserEntity } from "src/domain/entities/user.interface"
+import UserRepo from "../../persistance/user.impl";
 
+class UserUsecase {
+    private static ur = new UserRepo()
 
-async function registerUser(): Promise<string> {
+    public static async registerUser(data: IUserEntity): Promise<ICreateResponse> {
 
-    return "Oke"
-    // throw new CustomError("message", 401);
+        try {
+            const res = await this.ur.create(data)
+            return <ICreateResponse>{
+                id: res,
+            }
+        } catch (err) {
+            throw new CustomError(err, 500);
+        }
+    }
 }
 
-export default {
-    registerUser,
-}
+export default UserUsecase
