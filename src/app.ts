@@ -9,7 +9,14 @@ class App {
         this.routes(appInit.routes)
     }
 
-    public routes(routes: { forEach: (arg0: (routes: any) => void) => void }) {
+    public routes(routes: { forEach: (arg: (routes: any) => void) => void }) {
+
+
+        routes.forEach((route) => {
+            let router = new route()
+
+            this.app.register(router.routes, { prefix: 'api/v1' + router.prefix_route })
+        })
 
         this.app.get("/", async (request, reply) => {
             reply.send({
