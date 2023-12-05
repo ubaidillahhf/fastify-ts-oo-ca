@@ -1,6 +1,6 @@
 import { IUserEntity } from "src/domain/entities/user.interface";
 import { ISqlWrapper } from "src/persistance/interfaces/repo/sql-wrapper";
-import { IUserRepo } from "src/persistance/interfaces/repo/user.repo";
+import { IUserRepo } from "src/persistance/interfaces/repo/user.interface";
 
 const DB_TABLE = "users"
 
