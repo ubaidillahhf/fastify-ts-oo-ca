@@ -3,7 +3,9 @@ import config from './config/config';
 
 class App {
     public app: FastifyInstance
-    public app_port: number = parseInt(`${config.app.port}`, 10) ?? 8080
+    public app_port: number = parseInt(`${config.port}`, 10)
+
+
 
     constructor(appInit: { plugins: any; routes: any }) {
         this.app = fastify({ logger: true })
@@ -11,7 +13,6 @@ class App {
     }
 
     public routes(routes: { forEach: (arg: (routes: any) => void) => void }) {
-
 
         routes.forEach((route) => {
             let router = new route()

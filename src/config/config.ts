@@ -1,5 +1,9 @@
-import configYaml from 'config-yaml'
+import dotenv from 'dotenv';
 
-const config = configYaml(`./config/env/config.yml`)
+dotenv.config();
 
-export default config[process.env.NODE_ENV]
+const config = {
+    port: process.env.PORT || "8080"
+}
+
+export default config

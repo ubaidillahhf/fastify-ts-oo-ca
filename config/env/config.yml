@@ -1,2 +1,0 @@
-imports:
-  - { resource: 'local.yml', property: 'local' }
