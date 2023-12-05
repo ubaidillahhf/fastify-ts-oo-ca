@@ -1,8 +1,9 @@
 import fastify, { FastifyInstance } from "fastify";
+import config from './config/config';
 
 class App {
     public app: FastifyInstance
-    public app_port: number = 8080
+    public app_port: number = parseInt(`${config.app.port}`, 10) ?? 8080
 
     constructor(appInit: { plugins: any; routes: any }) {
         this.app = fastify({ logger: true })

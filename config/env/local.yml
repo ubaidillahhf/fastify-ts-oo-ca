@@ -1,0 +1,14 @@
+app:
+  domain: localhost
+  kind: local
+  port: 8089
+
+db:
+  mongo:
+    username: root
+    password: root
+    host: localhost
+    port: 27017
+    name: todo_template
+    auth: admin
+    collection: todo
