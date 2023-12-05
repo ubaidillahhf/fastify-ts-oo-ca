@@ -1,5 +1,5 @@
 import { FastifyInstance, FastifyPluginOptions } from "fastify"
-import responseHandler, { SuccessInterface } from "../presenter/presenter"
+import responseHandler from "../presenter/presenter"
 import UserUsecase from '../../application/usecase/user.usecase'
 
 class UserRoutes {
