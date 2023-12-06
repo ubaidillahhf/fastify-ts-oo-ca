@@ -1,8 +1,11 @@
 import { PrismaClient } from "@prisma/client";
 import { IUserEntity } from "src/domain/entities/user.interface";
-import { IUserRepo } from "src/persistance/user.interface";
 
-class UserRepo implements IUserRepo {
+export interface IUserRepo {
+    create(data: IUserEntity): Promise<number>;
+}
+
+export class UserRepo implements IUserRepo {
     private db: PrismaClient
 
     constructor() {
@@ -28,5 +31,3 @@ class UserRepo implements IUserRepo {
 
     }
 }
-
-export default UserRepo

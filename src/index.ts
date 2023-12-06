@@ -1,5 +1,5 @@
 import App from './app'
-import UserRoutes from './presentation/routes/user.route'
+import { UserRoutes } from './presentation/routes/user.route'
 
 const app = new App({ routes: [UserRoutes], plugins: [] })
 
