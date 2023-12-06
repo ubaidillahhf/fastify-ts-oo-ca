@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import { IUserEntity } from "src/domain/entities/user.interface";
+import { IUserEntity } from "src/domain/entities/user.entity";
 
 export interface IUserRepo {
     create(data: IUserEntity): Promise<number>;

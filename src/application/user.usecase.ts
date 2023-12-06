@@ -1,5 +1,5 @@
-import CustomError from "../presentation/overide/error";
-import { ICreateResponse, IUserEntity } from "src/domain/entities/user.interface"
+import { CustomError } from "../presentation/overide/error";
+import { ICreateResponse, IUserEntity } from "src/domain/entities/user.entity"
 import { UserRepo } from "../persistance/user.repo";
 
 export class UserUsecase {

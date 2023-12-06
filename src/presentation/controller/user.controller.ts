@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import { IUserEntity } from "src/domain/entities/user.interface";
+import { IUserEntity } from "src/domain/entities/user.entity";
 import responseHandler from "../presenter/base-presenter";
 import { UserUsecase } from '../../application/user.usecase'
 
